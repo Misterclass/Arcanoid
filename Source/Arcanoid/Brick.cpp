@@ -64,5 +64,6 @@ void ABrick::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
 
 void ABrick::DestroyBrick()
 {
+	BrickDestroyEvent.Broadcast();
 	this->Destroy();
 }

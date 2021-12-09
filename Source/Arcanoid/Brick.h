@@ -9,6 +9,8 @@
 class UBoxComponent;
 class USoundCue;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FBrickDestroyEvent);
+
 UCLASS()
 class ARCANOID_API ABrick : public AActor
 {
@@ -41,6 +43,9 @@ protected:
 
 	UPROPERTY(EditAnywhere)
 		float SpeedModifierOnBounce = 1.05f;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+		FBrickDestroyEvent BrickDestroyEvent;
 
 	UFUNCTION()
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
