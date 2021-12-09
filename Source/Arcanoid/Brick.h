@@ -39,7 +39,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		USoundCue* DestroySound;
 
-	float SpeedModifierOnBounce = 1.01f;
+	UPROPERTY(EditAnywhere)
+		float SpeedModifierOnBounce = 1.05f;
 
 	UFUNCTION()
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
