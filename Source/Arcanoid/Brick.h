@@ -7,6 +7,7 @@
 #include "Brick.generated.h"
 
 class UBoxComponent;
+class USoundCue;
 
 UCLASS()
 class ARCANOID_API ABrick : public AActor
@@ -34,6 +35,9 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int LivesCount = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USoundCue* DestroySound;
 
 	float SpeedModifierOnBounce = 1.01f;
 

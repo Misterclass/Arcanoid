@@ -5,6 +5,8 @@
 
 #include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Sound/SoundCue.h"
 #include "Ball.h"
 
 // Sets default values
@@ -52,6 +54,8 @@ void ABrick::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
 
 	if (LivesCount <= 0)
 	{
+		UGameplayStatics::PlaySound2D(this, DestroySound);
+
 		FTimerHandle UnusedHandle;
 		GetWorldTimerManager().SetTimer(UnusedHandle, this, &ABrick::DestroyBrick, 0.1f, false);
 	}
