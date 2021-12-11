@@ -41,11 +41,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		USoundCue* DestroySound;
 
-	UPROPERTY(EditAnywhere)
-		float SpeedModifierOnBounce = 1.05f;
+	/*UPROPERTY(EditAnywhere)
+		float SpeedModifierOnBounce = 1.05f;*/
 
-	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-		FBrickDestroyEvent BrickDestroyEvent;
 
 	UFUNCTION()
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
@@ -54,5 +52,9 @@ protected:
 			const FHitResult& SweepResult);
 
 	void DestroyBrick();
+
+public:
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+		FBrickDestroyEvent BrickDestroyEvent;
 
 };

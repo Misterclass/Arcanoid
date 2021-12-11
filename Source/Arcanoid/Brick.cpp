@@ -47,10 +47,10 @@ void ABrick::OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
 {
 	ABall* Ball = Cast<ABall>(OtherActor);
 
-	FVector BallVelocity = Ball->GetVelocity();
+	/*FVector BallVelocity = Ball->GetVelocity();
 	BallVelocity *= (SpeedModifierOnBounce - 1.f);
 
-	Ball->GetBall()->SetPhysicsLinearVelocity(BallVelocity, true);
+	Ball->GetBall()->SetPhysicsLinearVelocity(BallVelocity, true);*/
 
 	if (LivesCount <= 0)
 	{
