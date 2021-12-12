@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class Arcanoid : ModuleRules
+public class Balley : ModuleRules
 {
-	public Arcanoid(ReadOnlyTargetRules Target) : base(Target)
+	public Balley(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	

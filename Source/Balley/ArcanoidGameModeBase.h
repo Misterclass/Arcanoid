@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class ARCANOID_API AArcanoidGameModeBase : public AGameModeBase
+class BALLEY_API AArcanoidGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	

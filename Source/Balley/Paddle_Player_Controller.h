@@ -12,7 +12,7 @@ class ABall;
  * 
  */
 UCLASS()
-class ARCANOID_API APaddle_Player_Controller : public APlayerController
+class BALLEY_API APaddle_Player_Controller : public APlayerController
 {
 	GENERATED_BODY()
 

@@ -9,7 +9,7 @@
 class UFloatingPawnMovement;
 
 UCLASS()
-class ARCANOID_API APaddle : public APawn
+class BALLEY_API APaddle : public APawn
 {
 	GENERATED_BODY()
 

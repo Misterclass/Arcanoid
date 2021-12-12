@@ -9,7 +9,7 @@
 class UProjectileMovementComponent;
 
 UCLASS()
-class ARCANOID_API ABall : public AActor
+class BALLEY_API ABall : public AActor
 {
 	GENERATED_BODY()
 	

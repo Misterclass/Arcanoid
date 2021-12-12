@@ -3,12 +3,12 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class ArcanoidEditorTarget : TargetRules
+public class BalleyEditorTarget : TargetRules
 {
-	public ArcanoidEditorTarget( TargetInfo Target) : base(Target)
+	public BalleyEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "Arcanoid" } );
+		ExtraModuleNames.AddRange( new string[] { "Balley" } );
 	}
 }

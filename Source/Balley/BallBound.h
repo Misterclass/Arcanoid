@@ -4,21 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Brick.generated.h"
+#include "BallBound.generated.h"
 
 class UBoxComponent;
-class USoundCue;
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FBrickDestroyEvent);
+class APaddle_Player_Controller;
 
 UCLASS()
-class ARCANOID_API ABrick : public AActor
+class BALLEY_API ABallBound : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ABrick();
+	ABallBound();
 
 protected:
 	// Called when the game starts or when spawned
@@ -29,32 +27,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		UStaticMeshComponent* SM_Brick;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UBoxComponent* Box_Collision;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int LivesCount = 0;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		USoundCue* DestroySound;
-
-	/*UPROPERTY(EditAnywhere)
-		float SpeedModifierOnBounce = 1.05f;*/
-
+	APaddle_Player_Controller* PlayerController_REF;
 
 	UFUNCTION()
 		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp,
 			class AActor* OtherActor, class UPrimitiveComponent* OtherComp,
 			int32 OtherBodyIndex, bool bFromSweep,
 			const FHitResult& SweepResult);
-
-	void DestroyBrick();
-
-public:
-	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-		FBrickDestroyEvent BrickDestroyEvent;
 
 };
