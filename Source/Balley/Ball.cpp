@@ -15,6 +15,9 @@ ABall::ABall()
 	SM_Ball = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ball"));
 	RootComponent = SM_Ball;
 
+	SM_Test = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TEst"));
+	SM_Test->SetupAttachment(RootComponent);
+
 	SM_Ball->SetSimulatePhysics(true);
 	SM_Ball->SetEnableGravity(false);
 	SM_Ball->SetConstraintMode(EDOFMode::XZPlane);
