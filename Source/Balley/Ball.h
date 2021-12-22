@@ -28,9 +28,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UStaticMeshComponent* SM_Ball;
 
-	UPROPERTY(EditAnywhere, Category = "Test")
-		UStaticMeshComponent* SM_Test;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UProjectileMovementComponent* ProjectileMovement;
 
